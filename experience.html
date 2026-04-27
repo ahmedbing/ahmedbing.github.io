@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed Bingöl | Experience</title>
+  <meta name="description" content="Professional experience of Ahmed Bingöl across embedded systems, computer vision, robotics and machine learning." />
+  <style>
+    :root {
+      --bg: #08111f;
+      --bg-soft: #101a31;
+      --panel: rgba(16, 26, 49, 0.76);
+      --panel-2: rgba(20, 34, 63, 0.86);
+      --line: rgba(255,255,255,0.08);
+      --text: #eef3ff;
+      --muted: #aab6d3;
+      --accent: #79b8ff;
+      --accent-2: #7de2c3;
+      --shadow: 0 20px 40px rgba(0,0,0,0.28);
+      --radius: 22px;
+      --max: 1140px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(121,184,255,0.15), transparent 28%),
+        radial-gradient(circle at top right, rgba(125,226,195,0.12), transparent 22%),
+        linear-gradient(180deg, #07101c 0%, #0a1324 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font: inherit; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(12px);
+      background: rgba(7, 16, 28, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .brand span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      padding: 82px 0 28px;
+    }
+
+    .hero-card,
+    .role-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      right: -70px;
+      bottom: -70px;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(121,184,255,0.18), transparent 60%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: rgba(121,184,255,0.08);
+      border: 1px solid rgba(121,184,255,0.18);
+      margin-bottom: 16px;
+    }
+
+    h1, h2, h3, h4, p { margin-top: 0; }
+
+    h1 {
+      font-size: clamp(2rem, 3.8vw, 3.8rem);
+      line-height: 1.08;
+      margin-bottom: 16px;
+      max-width: 12ch;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 72ch;
+      margin-bottom: 0;
+    }
+
+    section { padding: 20px 0; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.45rem, 2vw, 2.2rem);
+      margin-bottom: 8px;
+    }
+
+    .layout {
+      display: block;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 22px;
+    }
+
+    .role-card {
+      padding: 24px;
+    }
+
+    .role-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .role-title {
+      font-size: 1.16rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .role-company {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .role-date {
+      color: var(--muted);
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    .role-points {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .role-points li {
+      margin-bottom: 10px;
+      color: var(--muted);
+    }
+
+    .tools {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .gallery-wrap {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px dashed rgba(255,255,255,0.1);
+    }
+
+    .gallery-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-head h4 {
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+
+    .gallery-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .gallery-scroll-btn,
+    .lightbox-btn,
+    .lightbox-close {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      cursor: pointer;
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .gallery-scroll-btn:hover,
+    .lightbox-btn:hover,
+    .lightbox-close:hover {
+      transform: translateY(-1px);
+      border-color: rgba(121,184,255,0.34);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .gallery-scroll-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+    }
+
+    .gallery-row {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 6px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(121,184,255,0.5) transparent;
+    }
+
+    .gallery-row::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .gallery-row::-webkit-scrollbar-thumb {
+      background: rgba(121,184,255,0.38);
+      border-radius: 999px;
+    }
+
+    .gallery-thumb {
+      min-width: 240px;
+      width: 240px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(121,184,255,0.04), rgba(255,255,255,0.02));
+      cursor: pointer;
+      padding: 0;
+      text-align: left;
+      color: inherit;
+      flex: 0 0 auto;
+    }
+
+    .gallery-thumb:hover {
+      border-color: rgba(121,184,255,0.34);
+      transform: translateY(-2px);
+    }
+
+    .gallery-thumb-image {
+      width: 100%;
+      height: 155px;
+      background: linear-gradient(180deg, rgba(121,184,255,0.07), rgba(255,255,255,0.02));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-thumb-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-thumb-body {
+      padding: 12px 14px 14px;
+    }
+
+    .gallery-thumb-body strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .gallery-thumb-body span,
+    .confidential-note {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .gallery-thumb-body code {
+      color: var(--accent-2);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.84rem;
+      word-break: break-word;
+    }
+
+    .media-badge {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(3, 8, 18, 0.78);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--text);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(3, 8, 18, 0.84);
+      backdrop-filter: blur(10px);
+      z-index: 200;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      width: min(1100px, 100%);
+      max-height: calc(100vh - 48px);
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .lightbox-btn,
+    .lightbox-close {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      font-size: 1.2rem;
+    }
+
+    .lightbox-center {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(10, 19, 36, 0.96);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .lightbox-topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .lightbox-meta {
+      min-width: 0;
+    }
+
+    .lightbox-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .lightbox-caption {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .lightbox-stage {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 55vh;
+      max-height: 70vh;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .lightbox-stage img,
+    .lightbox-stage video {
+      max-width: 100%;
+      max-height: calc(70vh - 32px);
+      object-fit: contain;
+      border-radius: 16px;
+    }
+
+    .lightbox-stage video {
+      background: #000;
+    }
+
+    .lightbox-thumbs {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 14px 16px 18px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .lightbox-thumb {
+      width: 84px;
+      height: 60px;
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 0;
+      cursor: pointer;
+      background: rgba(255,255,255,0.04);
+      opacity: 0.75;
+    }
+
+    .lightbox-thumb.active {
+      border-color: var(--accent);
+      opacity: 1;
+    }
+
+    .lightbox-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 980px) {
+      .lightbox-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .lightbox-btn {
+        display: none;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero-card,
+      .role-card {
+        padding: 20px;
+      }
+
+      .nav-inner,
+      .section-head,
+      .role-top {
+        display: block;
+      }
+
+      .nav-links {
+        margin-top: 12px;
+      }
+
+      .gallery-thumb {
+        min-width: 220px;
+        width: 220px;
+      }
+
+      .lightbox {
+        padding: 12px;
+      }
+
+      .lightbox-stage {
+        min-height: 42vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Ahmed <span>Bingöl</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <article class="hero-card">
+        <div class="eyebrow">Professional experience</div>
+        <h1>My Professional Journey</h1>
+        <p class="lead">This page holds the information about my professional career history.</p>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Career timeline</h2>
+        </div>
+      </div>
+
+      <div class="layout">
+        <div class="timeline">
+          <article class="role-card">
+            <div class="role-top">
+              <div>
+                <div class="role-title">Senior Software Engineer / Tech Lead</div>
+                <div class="role-company">ASML · Embedded Systems</div>
+              </div>
+              <div class="role-date">Sep 2024 – Present · Eindhoven, Netherlands</div>
+            </div>
+            <ul class="role-points">
+              <li>Technical lead and feature owner within the Dose Control cluster.</li>
+              <li>Responsible for feature intake, software design, work package creation, testing strategy, documentation, implementation and end-to-end delivery.</li>
+              <li>Driving alignment and delivery across multiple stakeholders.</li>
+              <li>Successful delivery of multiple complex features with extra scopes under tight deadlines.</li>
+            </ul>
+            <p class="tools"><strong>Tools:</strong> Python, C, C++, Robot Test, GTest / GMock, Git, Jira, Confluence, Polarion, ClearCase, Sparx EA</p>
+            <div class="gallery-wrap">
+              <h4>No images due to confidentiality</h4>
+            </div>
+          </article>
+
+          <article class="role-card">
+            <div class="role-top">
+              <div>
+                <div class="role-title">Senior Software &amp; ML Engineer</div>
+                <div class="role-company">CY Vision</div>
+              </div>
+              <div class="role-date">Mar 2022 – Sep 2024 · (Remote) San Jose, USA</div>
+            </div>
+            <ul class="role-points">
+              <li>Developed real-time driver monitoring and pupil tracking systems for automotive 3D AR HUD applications.</li>
+              <li>Implemented and deployed optimized neural network inference pipelines on Qualcomm Snapdragon, NXP, Blaize and Nvidia Xavier platforms.</li>
+              <li>Built a full ML pipeline covering dataset generation, training, evaluation, optimization and embedded deployment.</li>
+              <li>Integrated neural network models into production automotive systems under strict latency and performance constraints.</li>
+            </ul>
+            <p class="tools"><strong>Tools:</strong> C++, Python, TensorFlow, PyTorch, TensorRT, OpenCV, OpenVX, OpenGL, SNPE, QNN, Hexagon DSP, Git, Jira, Yocto Linux</p>
+            <div class="gallery-wrap" data-gallery-group="cyvision">
+              <div class="gallery-head">
+                <h4>Media</h4>
+                <div class="gallery-actions">
+                  <button class="gallery-scroll-btn" type="button" data-gallery-scroll="left" aria-label="Scroll left">←</button>
+                  <button class="gallery-scroll-btn" type="button" data-gallery-scroll="right" aria-label="Scroll right">→</button>
+                </div>
+              </div>
+              <div class="gallery-row" data-gallery-row>
+                <button
+                  class="gallery-thumb"
+                  type="button"
+                  data-gallery-item
+                  data-type="video"
+                  data-full="videos/cyvision-1.mp4"
+                  data-thumb="images/cyvision-1.jpg"
+                  data-poster="images/cyvision-1.jpg"
+                  data-title="CY Vision demo video"
+                  data-caption="Short demo clip for driver monitoring / HUD-related work."
+                >
+                  <div class="gallery-thumb-image">
+                    <img src="images/cyvision-1.jpg" alt="CY Vision demo video thumbnail" loading="lazy">
+                    <span class="media-badge">Video</span>
+                  </div>
+                  <div class="gallery-thumb-body">
+                    <strong>HUD Product Demo</strong>
+                    <span>How our product projects images to eyes at real-time.</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-2.jpg" data-thumb="images/cyvision-2.jpg" data-title="CY Vision image 2" data-caption="Pipeline, setup or deployment visual.">
+                  <div class="gallery-thumb-image"><img src="images/cyvision-2.jpg" alt="CY Vision image 2" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>CES 2024 Showcase</strong>
+                    <span>High engagement around our product at CES 2024.</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-3.jpg" data-thumb="images/cyvision-3.jpg" data-title="CY Vision image 3" data-caption="Hardware, HUD-related or embedded visual.">
+                  <div class="gallery-thumb-image"><img src="images/cyvision-3.jpg" alt="CY Vision image 3" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Test image in windshield</strong>
+                    <span>Our HUD test image in windshield at real-time.</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-4.jpg" data-thumb="images/cyvision-4.jpg" data-title="CY Vision image 4" data-caption="Additional project result or validation screenshot.">
+                  <div class="gallery-thumb-image"><img src="images/cyvision-4.jpg" alt="CY Vision image 4" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Example rendered image</strong>
+                    <span>Rendered speedometer display at our HUD</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-5.jpg" data-thumb="images/cyvision-5.jpg" data-title="CY Vision image 5" data-caption="Device setup or product-facing visual.">
+                  <div class="gallery-thumb-image"><img src="images/cyvision-5.jpg" alt="CY Vision image 5" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Tools for development</strong>
+                    <span>Debugging opto-mechanical image errors at software level.</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-6.jpg" data-thumb="images/cyvision-6.jpg" data-title="CY Vision image 6" data-caption="Extra image slot for larger projects.">
+                  <div class="gallery-thumb-image"><img src="images/cyvision-6.jpg" alt="CY Vision image 6" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>CY Vision image 6</strong>
+                    <span>Coolest image on its way.</span><br>
+                    <code>images/cyvision-6.jpg</code>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="role-card">
+            <div class="role-top">
+              <div>
+                <div class="role-title">Embedded &amp; Computer Vision Engineer</div>
+                <div class="role-company">Makhina Robotics</div>
+              </div>
+              <div class="role-date">Dec 2019 – Feb 2022 · Istanbul, Turkey</div>
+            </div>
+            <ul class="role-points">
+              <li>Led embedded software development for an Autonomous Mobile Robot using STM32-based hardware.</li>
+              <li>Worked on sensors, motor drivers, communication buses and control algorithms.</li>
+              <li>Handled QR detection/scanning tasks and researched multi-object tracking in unknown environments.</li>
+            </ul>
+            <p class="tools"><strong>Tools:</strong> Python, C, C++, MATLAB, STM32, OpenCV, TensorRT, Jira, Zoho, Git</p>
+            <div class="gallery-wrap" data-gallery-group="makhina">
+              <div class="gallery-head">
+                <h4>Images for this role</h4>
+                <div class="gallery-actions">
+                  <button class="gallery-scroll-btn" type="button" data-gallery-scroll="left" aria-label="Scroll left">←</button>
+                  <button class="gallery-scroll-btn" type="button" data-gallery-scroll="right" aria-label="Scroll right">→</button>
+                </div>
+              </div>
+              <div class="gallery-row" data-gallery-row>
+                <button
+                  class="gallery-thumb"
+                  type="button"
+                  data-gallery-item
+                  data-type="video"
+                  data-full="videos/makhina-1.mp4"
+                  data-thumb="images/makhina-1.jpg"
+                  data-poster="images/makhina-1.jpg"
+                  data-title="Makhina demo video"
+                  data-caption="Short demo clip for driver monitoring / HUD-related work."
+                >
+                  <div class="gallery-thumb-image">
+                    <img src="images/makhina-1.jpg" alt="Makhina demo video thumbnail" loading="lazy">
+                    <span class="media-badge">Video</span>
+                  </div>
+                  <div class="gallery-thumb-body">
+                    <strong>Robee and friends</strong>
+                    <span>Robee hanging out with friends</span><br>
+                  </div>
+                </button>
+
+                <button
+                  class="gallery-thumb"
+                  type="button"
+                  data-gallery-item
+                  data-type="video"
+                  data-full="videos/makhina-2.mp4"
+                  data-thumb="images/makhina-2.jpg"
+                  data-poster="images/makhina-2.jpg"
+                  data-title="Makhina emergency test video"
+                  data-caption="Short demo clip for emergency scenarios."
+                >
+                  <div class="gallery-thumb-image">
+                    <img src="images/makhina-2.jpg" alt="Makhina emergency test video thumbnail" loading="lazy">
+                    <span class="media-badge">Video</span>
+                  </div>
+                  <div class="gallery-thumb-body">
+                    <strong>Robee &hearts;</strong>
+                    <span>Robee against obstacles</span><br>
+                  </div>
+                </button>
+
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-3.jpg" data-thumb="images/makhina-3.jpg" data-title="In-house Development Board" data-caption="Oscilloscope debugging, verifications">
+                  <div class="gallery-thumb-image"><img src="images/makhina-3.jpg" alt="Makhina image 2" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Dev. In-house Board</strong>
+                    <span>Oscilloscope debugging, verifications</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-4.jpg" data-thumb="images/makhina-4.jpg" data-title="HIL Test" data-caption="HIL Tests with schematic verifications">
+                  <div class="gallery-thumb-image"><img src="images/makhina-4.jpg" alt="Makhina image 3" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>HIL Test</strong>
+                    <span>HIL Tests with schematic verifications</span><br>
+                  </div>
+                </button>
+
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-5.jpg" data-thumb="images/makhina-5.jpg" data-title="Makhina image 5" data-caption="Another supporting image for this role.">
+                  <div class="gallery-thumb-image"><img src="images/makhina-5.jpg" alt="Makhina image 5" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Makhina image 5</strong>
+                    <span>Other cool images from warehouse on their way.</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-6.jpg" data-thumb="images/makhina-6.jpg" data-title="Makhina image 6" data-caption="Extra image slot for larger projects.">
+                  <div class="gallery-thumb-image"><img src="images/makhina-6.jpg" alt="Makhina image 6" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Makhina image 6</strong>
+                    <span>Extra cool image on their way.</span><br>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="role-card">
+            <div class="role-top">
+              <div>
+                <div class="role-title">R&amp;D Software Engineer</div>
+                <div class="role-company">Turkish Airlines Technic</div>
+              </div>
+              <div class="role-date">Sep 2018 – Dec 2019 · Istanbul, Turkey</div>
+            </div>
+            <ul class="role-points">
+              <li>Worked on computer vision R&amp;D including instance segmentation, object detection and skyline detection for UAV sense-and-avoid systems.</li>
+              <li>Developed a user-facing application for Teknofest that detected facial landmarks and overlaid pilot suits on participants.</li>
+            </ul>
+            <p class="tools"><strong>Tools:</strong> C++, Python, OpenCV, Keras, PyQt</p>
+            <div class="gallery-wrap" data-gallery-group="thytechnic">
+              <div class="gallery-head">
+                <h4>Images for this role</h4>
+                <div class="gallery-actions">
+                  <button class="gallery-scroll-btn" type="button" data-gallery-scroll="left" aria-label="Scroll left">←</button>
+                  <button class="gallery-scroll-btn" type="button" data-gallery-scroll="right" aria-label="Scroll right">→</button>
+                </div>
+              </div>
+              <div class="gallery-row" data-gallery-row>
+                <button
+                  class="gallery-thumb"
+                  type="button"
+                  data-gallery-item
+                  data-type="video"
+                  data-full="videos/thytechnic-1.mp4"
+                  data-thumb="images/thytechnic-1.jpg"
+                  data-poster="images/thytechnic-1.jpg"
+                  data-title="THY Technic demo video"
+                  data-caption="Short demo clip for instance segmentation."
+                >
+                  <div class="gallery-thumb-image">
+                    <img src="images/thytechnic-1.jpg" alt="THY Technic demo video thumbnail" loading="lazy">
+                    <span class="media-badge">Video</span>
+                  </div>
+                  <div class="gallery-thumb-body">
+                    <strong>Instance Segmentation</strong>
+                    <span>R&D work on instance segmentation for UAV Sky Detection systems.</span><br>
+                  </div>
+                </button>
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/thytechnic-1.jpg" data-thumb="images/thytechnic-1.jpg" data-title="THY Technic image 1" data-caption="CV demo or UAV-related visual.">
+                  <div class="gallery-thumb-image"><img src="images/thytechnic-1.jpg" alt="THY Technic image 1" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>THY Technic image 1</strong>
+                    <span>Instance segmentation visualization from UAV wing.</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/thytechnic-2.jpg" data-thumb="images/thytechnic-2.jpg" data-title="THY Technic image 2" data-caption="Teknofest application screenshot.">
+                  <div class="gallery-thumb-image"><img src="images/thytechnic-2.jpg" alt="THY Technic image 2" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Skyline Detection</strong>
+                    <span>Skyline Detection algorithm with binary line drawing</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/thytechnic-3.jpg" data-thumb="images/thytechnic-3.jpg" data-title="THY Technic image 3" data-caption="Optional extra supporting image.">
+                  <div class="gallery-thumb-image"><img src="images/thytechnic-3.jpg" alt="THY Technic image 3" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Skyline Detection again </strong>
+                    <span>Skyline Detection algorithm with False Positives</span><br>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="role-card">
+            <div class="role-top">
+              <div>
+                <div class="role-title">Part-Time R&amp;D Engineer · R&amp;D Intern</div>
+                <div class="role-company">Bozankaya GmbH</div>
+              </div>
+              <div class="role-date">Jul 2017 – Sep 2017, then Dec 2017 – May 2018 · Salzgitter, Germany - Istanbul, Turkey</div>
+            </div>
+            <ul class="role-points">
+              <li>Worked on Battery Management System software, battery balancing and communication protocols over CAN Bus and MOD Bus.</li>
+              <li>Contributed to a drowsiness-alert system based on driver facial expressions.</li>
+              <li>Internship work included AtMega-based battery charger device programming with screen, buzzer and potentiometer support.</li>
+            </ul>
+            <p class="tools"><strong>Tools:</strong> C, Python, MATLAB, OpenCV, Assembly, Atmel</p>
+            <div class="gallery-wrap" data-gallery-group="bozankaya">
+              <div class="gallery-head">
+                <h4>UNDER CONSTRUCTION</h4>
+                <div class="gallery-actions">
+                  <button class="gallery-scroll-btn" type="button" data-gallery-scroll="left" aria-label="Scroll left">←</button>
+                  <button class="gallery-scroll-btn" type="button" data-gallery-scroll="right" aria-label="Scroll right">→</button>
+                </div>
+              </div>
+              <div class="gallery-row" data-gallery-row>
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/bozankaya-1.jpg" data-thumb="images/bozankaya-1.jpg" data-title="Bozankaya image 1" data-caption="BMS or hardware-related visual.">
+                  <div class="gallery-thumb-image"><img src="images/bozankaya-1.jpg" alt="Bozankaya image 1" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Bozankaya image 1</strong>
+                    <span>Some cool stuff.</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/bozankaya-2.jpg" data-thumb="images/bozankaya-2.jpg" data-title="Bozankaya image 2" data-caption="Embedded prototype or charger visual.">
+                  <div class="gallery-thumb-image"><img src="images/bozankaya-2.jpg" alt="Bozankaya image 2" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Bozankaya image 2</strong>
+                    <span>Other cool stuff.</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/bozankaya-3.jpg" data-thumb="images/bozankaya-3.jpg" data-title="Bozankaya image 3" data-caption="Optional extra supporting image.">
+                  <div class="gallery-thumb-image"><img src="images/bozankaya-3.jpg" alt="Bozankaya image 3" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Bozankaya image 3</strong>
+                    <span>Extra cool stuff.</span><br>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    April 2026 - All rights reserved
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-btn" type="button" id="lightboxPrev" aria-label="Previous media">←</button>
+
+      <div class="lightbox-center">
+        <div class="lightbox-topbar">
+          <div class="lightbox-meta">
+            <div class="lightbox-title" id="lightboxTitle">Media title</div>
+            <div class="lightbox-caption" id="lightboxCaption">Media caption</div>
+          </div>
+          <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Close viewer">✕</button>
+        </div>
+
+        <div class="lightbox-stage">
+          <img id="lightboxImage" src="" alt="Expanded project image" style="display:none;">
+          <video id="lightboxVideo" controls playsinline preload="metadata" style="display:none;"></video>
+        </div>
+
+        <div class="lightbox-thumbs" id="lightboxThumbs"></div>
+      </div>
+
+      <button class="lightbox-btn" type="button" id="lightboxNext" aria-label="Next media">→</button>
+    </div>
+  </div>
+
+  <script>
+    const galleries = Array.from(document.querySelectorAll('[data-gallery-group]')).map((gallery) => {
+      const items = Array.from(gallery.querySelectorAll('[data-gallery-item]')).map((button) => ({
+        type: button.dataset.type || 'image',
+        full: button.dataset.full,
+        thumb: button.dataset.thumb || button.dataset.full,
+        poster: button.dataset.poster || button.dataset.thumb || '',
+        title: button.dataset.title || '',
+        caption: button.dataset.caption || '',
+        button,
+      }));
+
+      return {
+        element: gallery,
+        row: gallery.querySelector('[data-gallery-row]'),
+        items,
+      };
+    });
+
+    galleries.forEach((gallery) => {
+      const leftBtn = gallery.element.querySelector('[data-gallery-scroll="left"]');
+      const rightBtn = gallery.element.querySelector('[data-gallery-scroll="right"]');
+      const scrollAmount = 260;
+
+      if (leftBtn) {
+        leftBtn.addEventListener('click', () => {
+          gallery.row.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+      }
+
+      if (rightBtn) {
+        rightBtn.addEventListener('click', () => {
+          gallery.row.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+      }
+    });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxVideo = document.getElementById('lightboxVideo');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxThumbs = document.getElementById('lightboxThumbs');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    let activeGallery = null;
+    let activeIndex = 0;
+
+    function stopLightboxVideo() {
+      lightboxVideo.pause();
+      lightboxVideo.removeAttribute('src');
+      lightboxVideo.load();
+    }
+
+    function renderLightboxMedia() {
+      if (!activeGallery) return;
+
+      const item = activeGallery.items[activeIndex];
+      lightboxTitle.textContent = item.title || 'Media';
+      lightboxCaption.textContent = item.caption || '';
+
+      if (item.type === 'video') {
+        lightboxImage.style.display = 'none';
+        lightboxImage.removeAttribute('src');
+
+        lightboxVideo.style.display = 'block';
+        lightboxVideo.src = item.full;
+        if (item.poster) {
+          lightboxVideo.poster = item.poster;
+        } else {
+          lightboxVideo.removeAttribute('poster');
+        }
+        lightboxVideo.load();
+      } else {
+        stopLightboxVideo();
+        lightboxVideo.style.display = 'none';
+
+        lightboxImage.style.display = 'block';
+        lightboxImage.src = item.full;
+        lightboxImage.alt = item.title || 'Expanded gallery image';
+      }
+
+      lightboxThumbs.innerHTML = '';
+
+      activeGallery.items.forEach((galleryItem, index) => {
+        const thumbButton = document.createElement('button');
+        thumbButton.type = 'button';
+        thumbButton.className = 'lightbox-thumb' + (index === activeIndex ? ' active' : '');
+        thumbButton.setAttribute('aria-label', 'Open media ' + (index + 1));
+
+        const thumbImage = document.createElement('img');
+        thumbImage.src = galleryItem.poster || galleryItem.thumb;
+        thumbImage.alt = galleryItem.title || 'Gallery thumbnail';
+
+        thumbButton.appendChild(thumbImage);
+        thumbButton.addEventListener('click', () => {
+          activeIndex = index;
+          renderLightboxMedia();
+        });
+
+        lightboxThumbs.appendChild(thumbButton);
+      });
+    }
+
+    function openLightbox(gallery, index) {
+      activeGallery = gallery;
+      activeIndex = index;
+      renderLightboxMedia();
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      lightboxImage.removeAttribute('src');
+      lightboxImage.style.display = 'none';
+      stopLightboxVideo();
+      lightboxVideo.style.display = 'none';
+    }
+
+    function showNext(step) {
+      if (!activeGallery) return;
+      const total = activeGallery.items.length;
+      activeIndex = (activeIndex + step + total) % total;
+      renderLightboxMedia();
+    }
+
+    galleries.forEach((gallery) => {
+      gallery.items.forEach((item, index) => {
+        item.button.addEventListener('click', () => openLightbox(gallery, index));
+      });
+    });
+
+    lightboxPrev.addEventListener('click', () => showNext(-1));
+    lightboxNext.addEventListener('click', () => showNext(1));
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowLeft') showNext(-1);
+      if (event.key === 'ArrowRight') showNext(1);
+    });
+  </script>
+</body>
+</html>
