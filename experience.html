@@ -22,8 +22,12 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
     body {
+      overflow-x: hidden;
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
@@ -41,6 +45,19 @@
     .container {
       width: min(calc(100% - 32px), var(--max));
       margin: 0 auto;
+    }
+ 
+    main,
+    section,
+    .layout,
+    .timeline,
+    .role-card,
+    .gallery-wrap,
+    .gallery-row,
+    .lightbox-inner,
+    .lightbox-center,
+    .lightbox-stage {
+      min-width: 0;
     }
 
     .nav {
@@ -205,10 +222,18 @@
       font-size: 0.95rem;
     }
 
-    .gallery-wrap {
-      margin-top: 18px;
-      padding-top: 18px;
-      border-top: 1px dashed rgba(255,255,255,0.1);
+    .gallery-thumb {
+      flex: 0 0 240px;
+      width: 240px;
+      max-width: 240px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(121,184,255,0.04), rgba(255,255,255,0.02));
+      cursor: pointer;
+      padding: 0;
+      text-align: left;
+      color: inherit;
     }
 
     .gallery-head {
@@ -257,8 +282,13 @@
     .gallery-row {
       display: flex;
       gap: 14px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
       overflow-x: auto;
+      overflow-y: hidden;
       scroll-behavior: smooth;
+      overscroll-behavior-x: contain;
       padding-bottom: 6px;
       scrollbar-width: thin;
       scrollbar-color: rgba(121,184,255,0.5) transparent;
@@ -541,7 +571,7 @@
             <div class="role-top">
               <div>
                 <div class="role-title">Senior Software Engineer / Tech Lead</div>
-                <div class="role-company">ASML · Embedded Systems</div>
+                <div class="role-company">ASML · Topic Embedded Systems</div>
               </div>
               <div class="role-date">Sep 2024 – Present · Eindhoven, Netherlands</div>
             </div>
@@ -551,7 +581,7 @@
               <li>Driving alignment and delivery across multiple stakeholders.</li>
               <li>Successful delivery of multiple complex features with extra scopes under tight deadlines.</li>
             </ul>
-            <p class="tools"><strong>Tools:</strong> Python, C, C++, Robot Test, GTest / GMock, Git, Jira, Confluence, Polarion, ClearCase, Sparx EA</p>
+            <p class="tools"><strong>Tools:</strong> Python, C, C++, Robot Test, GTest, Git, Jira, Confluence, Polarion, ClearCase, Sparx EA</p>
             <div class="gallery-wrap">
               <h4>No images due to confidentiality</h4>
             </div>
@@ -590,56 +620,68 @@
                   data-thumb="images/cyvision-1.jpg"
                   data-poster="images/cyvision-1.jpg"
                   data-title="CY Vision demo video"
-                  data-caption="Short demo clip for driver monitoring / HUD-related work."
+                  data-caption="Short demo clip for eye tracker on real-time HUD."
                 >
                   <div class="gallery-thumb-image">
                     <img src="images/cyvision-1.jpg" alt="CY Vision demo video thumbnail" loading="lazy">
                     <span class="media-badge">Video</span>
                   </div>
                   <div class="gallery-thumb-body">
-                    <strong>HUD Product Demo</strong>
+                    <strong>Eye Tracking & Rendering</strong>
                     <span>How our product projects images to eyes at real-time.</span><br>
                   </div>
                 </button>
 
-                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-2.jpg" data-thumb="images/cyvision-2.jpg" data-title="CY Vision image 2" data-caption="Pipeline, setup or deployment visual.">
-                  <div class="gallery-thumb-image"><img src="images/cyvision-2.jpg" alt="CY Vision image 2" loading="lazy"></div>
+                <button
+                  class="gallery-thumb"
+                  type="button"
+                  data-gallery-item
+                  data-type="video"
+                  data-full="videos/cyvision-2.mp4"
+                  data-thumb="images/cyvision-2.jpg"
+                  data-poster="images/cyvision-2.jpg"
+                  data-title="CY Vision demo video"
+                  data-caption="Short demo clip for eye tracker on real-time HUD."
+                >
+                  <div class="gallery-thumb-image">
+                    <img src="images/cyvision-2.jpg" alt="CY Vision demo video thumbnail" loading="lazy">
+                    <span class="media-badge">Video</span>
+                  </div>
+                  <div class="gallery-thumb-body">
+                    <strong>AR HUD Vision</strong>
+                    <span>What drivers can see at windshield in real-time.</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-3.jpg" data-thumb="images/cyvision-3.jpg" data-title="CY Vision image 3" data-caption="Pipeline, setup or deployment visual.">
+                  <div class="gallery-thumb-image"><img src="images/cyvision-3.jpg" alt="CY Vision image 3" loading="lazy"></div>
                   <div class="gallery-thumb-body">
                     <strong>CES 2024 Showcase</strong>
                     <span>High engagement around our product at CES 2024.</span><br>
                   </div>
                 </button>
 
-                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-3.jpg" data-thumb="images/cyvision-3.jpg" data-title="CY Vision image 3" data-caption="Hardware, HUD-related or embedded visual.">
-                  <div class="gallery-thumb-image"><img src="images/cyvision-3.jpg" alt="CY Vision image 3" loading="lazy"></div>
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-4.jpg" data-thumb="images/cyvision-4.jpg" data-title="CY Vision image 4" data-caption="Hardware, HUD-related or embedded visual.">
+                  <div class="gallery-thumb-image"><img src="images/cyvision-4.jpg" alt="CY Vision image 4" loading="lazy"></div>
                   <div class="gallery-thumb-body">
                     <strong>Test image in windshield</strong>
                     <span>Our HUD test image in windshield at real-time.</span><br>
                   </div>
                 </button>
 
-                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-4.jpg" data-thumb="images/cyvision-4.jpg" data-title="CY Vision image 4" data-caption="Additional project result or validation screenshot.">
-                  <div class="gallery-thumb-image"><img src="images/cyvision-4.jpg" alt="CY Vision image 4" loading="lazy"></div>
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-5.jpg" data-thumb="images/cyvision-5.jpg" data-title="CY Vision image 5" data-caption="Additional project result or validation screenshot.">
+                  <div class="gallery-thumb-image"><img src="images/cyvision-5.jpg" alt="CY Vision image 5" loading="lazy"></div>
                   <div class="gallery-thumb-body">
                     <strong>Example rendered image</strong>
                     <span>Rendered speedometer display at our HUD</span><br>
                   </div>
                 </button>
 
-                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-5.jpg" data-thumb="images/cyvision-5.jpg" data-title="CY Vision image 5" data-caption="Device setup or product-facing visual.">
-                  <div class="gallery-thumb-image"><img src="images/cyvision-5.jpg" alt="CY Vision image 5" loading="lazy"></div>
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-6.jpg" data-thumb="images/cyvision-6.jpg" data-title="CY Vision image 6" data-caption="Device setup or product-facing visual.">
+                  <div class="gallery-thumb-image"><img src="images/cyvision-6.jpg" alt="CY Vision image 6" loading="lazy"></div>
                   <div class="gallery-thumb-body">
                     <strong>Tools for development</strong>
                     <span>Debugging opto-mechanical image errors at software level.</span><br>
-                  </div>
-                </button>
-
-                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/cyvision-6.jpg" data-thumb="images/cyvision-6.jpg" data-title="CY Vision image 6" data-caption="Extra image slot for larger projects.">
-                  <div class="gallery-thumb-image"><img src="images/cyvision-6.jpg" alt="CY Vision image 6" loading="lazy"></div>
-                  <div class="gallery-thumb-body">
-                    <strong>CY Vision image 6</strong>
-                    <span>Coolest image on its way.</span><br>
-                    <code>images/cyvision-6.jpg</code>
                   </div>
                 </button>
               </div>
@@ -677,8 +719,8 @@
                   data-full="videos/makhina-1.mp4"
                   data-thumb="images/makhina-1.jpg"
                   data-poster="images/makhina-1.jpg"
-                  data-title="Makhina demo video"
-                  data-caption="Short demo clip for driver monitoring / HUD-related work."
+                  data-title="Robee demo video"
+                  data-caption="Short demo clip for Robee working at Warehouse."
                 >
                   <div class="gallery-thumb-image">
                     <img src="images/makhina-1.jpg" alt="Makhina demo video thumbnail" loading="lazy">
@@ -686,7 +728,7 @@
                   </div>
                   <div class="gallery-thumb-body">
                     <strong>Robee and friends</strong>
-                    <span>Robee hanging out with friends</span><br>
+                    <span>Robee hanging out with friends at Warehouse</span><br>
                   </div>
                 </button>
 
@@ -698,7 +740,7 @@
                   data-full="videos/makhina-2.mp4"
                   data-thumb="images/makhina-2.jpg"
                   data-poster="images/makhina-2.jpg"
-                  data-title="Makhina emergency test video"
+                  data-title="Robee emergency test video"
                   data-caption="Short demo clip for emergency scenarios."
                 >
                   <div class="gallery-thumb-image">
@@ -711,17 +753,38 @@
                   </div>
                 </button>
 
+                <button
+                  class="gallery-thumb"
+                  type="button"
+                  data-gallery-item
+                  data-type="video"
+                  data-full="videos/makhina-3.mp4"
+                  data-thumb="images/makhina-3.jpg"
+                  data-poster="images/makhina-3.jpg"
+                  data-title="Robee charging test video"
+                  data-caption="Short demo clip for charging scenarios."
+                >
+                  <div class="gallery-thumb-image">
+                    <img src="images/makhina-3.jpg" alt="Robee going for charging" loading="lazy">
+                    <span class="media-badge">Video</span>
+                  </div>
+                  <div class="gallery-thumb-body">
+                    <strong>Robee charging</strong>
+                    <span>Robee needs to charge</span><br>
+                  </div>
+                </button>
 
-                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-3.jpg" data-thumb="images/makhina-3.jpg" data-title="In-house Development Board" data-caption="Oscilloscope debugging, verifications">
-                  <div class="gallery-thumb-image"><img src="images/makhina-3.jpg" alt="Makhina image 2" loading="lazy"></div>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-4.jpg" data-thumb="images/makhina-4.jpg" data-title="In-house Development Board" data-caption="Oscilloscope debugging, verifications">
+                  <div class="gallery-thumb-image"><img src="images/makhina-4.jpg" alt="Makhina image 4" loading="lazy"></div>
                   <div class="gallery-thumb-body">
                     <strong>Dev. In-house Board</strong>
                     <span>Oscilloscope debugging, verifications</span><br>
                   </div>
                 </button>
 
-                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-4.jpg" data-thumb="images/makhina-4.jpg" data-title="HIL Test" data-caption="HIL Tests with schematic verifications">
-                  <div class="gallery-thumb-image"><img src="images/makhina-4.jpg" alt="Makhina image 3" loading="lazy"></div>
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-5.jpg" data-thumb="images/makhina-5.jpg" data-title="HIL Test" data-caption="HIL Tests with schematic verifications">
+                  <div class="gallery-thumb-image"><img src="images/makhina-5.jpg" alt="Makhina image 5" loading="lazy"></div>
                   <div class="gallery-thumb-body">
                     <strong>HIL Test</strong>
                     <span>HIL Tests with schematic verifications</span><br>
@@ -729,19 +792,11 @@
                 </button>
 
 
-                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-5.jpg" data-thumb="images/makhina-5.jpg" data-title="Makhina image 5" data-caption="Another supporting image for this role.">
-                  <div class="gallery-thumb-image"><img src="images/makhina-5.jpg" alt="Makhina image 5" loading="lazy"></div>
-                  <div class="gallery-thumb-body">
-                    <strong>Makhina image 5</strong>
-                    <span>Other cool images from warehouse on their way.</span><br>
-                  </div>
-                </button>
-
-                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-6.jpg" data-thumb="images/makhina-6.jpg" data-title="Makhina image 6" data-caption="Extra image slot for larger projects.">
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-6.jpg" data-thumb="images/makhina-6.jpg" data-title="Makhina image 6" data-caption="Another supporting image for this role.">
                   <div class="gallery-thumb-image"><img src="images/makhina-6.jpg" alt="Makhina image 6" loading="lazy"></div>
                   <div class="gallery-thumb-body">
                     <strong>Makhina image 6</strong>
-                    <span>Extra cool image on their way.</span><br>
+                    <span>Other cool images from warehouse on their way.</span><br>
                   </div>
                 </button>
               </div>
@@ -786,15 +841,15 @@
                     <span class="media-badge">Video</span>
                   </div>
                   <div class="gallery-thumb-body">
-                    <strong>Instance Segmentation</strong>
-                    <span>R&D work on instance segmentation for UAV Sky Detection systems.</span><br>
+                    <strong>Semantic Segmentation</strong>
+                    <span>R&D work on semantic segmentation for UAV Sky Detection systems.</span><br>
                   </div>
                 </button>
                 <button class="gallery-thumb" type="button" data-gallery-item data-full="images/thytechnic-1.jpg" data-thumb="images/thytechnic-1.jpg" data-title="THY Technic image 1" data-caption="CV demo or UAV-related visual.">
                   <div class="gallery-thumb-image"><img src="images/thytechnic-1.jpg" alt="THY Technic image 1" loading="lazy"></div>
                   <div class="gallery-thumb-body">
-                    <strong>THY Technic image 1</strong>
-                    <span>Instance segmentation visualization from UAV wing.</span><br>
+                    <strong>Air Segmentation</strong>
+                    <span>Semantic segmentation visualization from UAV wing.</span><br>
                   </div>
                 </button>
 
