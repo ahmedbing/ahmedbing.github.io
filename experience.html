@@ -564,14 +564,16 @@
       <article class="hero-card">
         <div class="eyebrow">Professional experience</div>
         <h1>My Professional Journey</h1>
-        <p class="lead">This page holds the information about my professional career history.</p>
+        <p class="lead">
+          This page brings together my professional career history together with selected research and thesis work that I consider important to my engineering journey.
+        </p>
       </article>
     </section>
 
     <section>
       <div class="section-head">
         <div>
-          <h2>Career timeline</h2>
+          <h2>Career & research timeline</h2>
         </div>
       </div>
 
@@ -594,6 +596,73 @@
             <p class="tools"><strong>Tools:</strong> Python, C, C++, Robot Test, GTest, Git, Jira, CI/CD, Jenkins, Docker, Confluence, Polarion, ClearCase, Sparx EA</p>
             <div class="gallery-wrap">
               <h4>No images due to confidentiality</h4>
+            </div>
+          </article>
+
+          <article class="role-card">
+            <div class="role-top">
+              <div>
+                <div class="role-title">MSc Thesis Research · Ultra-Low-Power Embedded Object Detection</div>
+                <div class="role-company">Academic Research · Marmara University</div>
+              </div>
+              <div class="role-date">2024 – 2025 · Istanbul / Amsterdam</div>
+            </div>
+          
+            <ul class="role-points">
+              <li>Designed and evaluated an ultra-compact object detection pipeline intended to fit under 1 MB for ultra-low-power MCUs such as STM32H, STM32F, STM32L and Arduino Portenta-class devices.</li>
+              <li>Targeted low-cost battery-powered supermarket shelf monitoring/SKU systems that wake periodically, capture an image, and detect shelf products with minimal memory and compute budget.</li>
+              <li>Worked on SKU110K and Migros-style retail object datasets with large category diversity, where traditional shelf-specific computer vision approaches were not sufficient for scalable deployment.</li>
+              <li>Explored and implemented multiple model and training improvements for custom Object Detection Model development inspired by MCUNet, MobileNet's and YOLO-v3 to V11 approaches, including model quantizations, knowladge dissilation, loss-function improvements, augmentation ideas, and lightweight deployment-oriented design decisions.</li>
+              <li>Researched and benchmarked all state-of-the-art MCU targeted detection models and frameworks such as Edge Impulse, STM32-AI-Zoo, MIT Tiny Engine, NXP eIQ.</li>
+              <li>Despite strong technical progress, the thesis was not completed because the desired accuracy target was not achievable within the hardware and memory limits of the intended ultra-low-power deployment scenario.</li>
+            </ul>
+          
+            <p class="tools">
+              <strong>Tools:</strong> Python, PyTorch, TensorFlow Lite / TensorFlow Lite Micro, OpenCV, STM32-AI, SKU110K, Grozi, YOLO-v3 to V11, MobileNets
+            </p>
+          
+            <div class="gallery-wrap" data-gallery-group="thesis">
+              <div class="gallery-head">
+                <h4>Images from thesis work</h4>
+                <div class="gallery-actions">
+                  <button class="gallery-scroll-btn" type="button" data-gallery-scroll="left" aria-label="Scroll left">←</button>
+                  <button class="gallery-scroll-btn" type="button" data-gallery-scroll="right" aria-label="Scroll right">→</button>
+                </div>
+              </div>
+            
+              <div class="gallery-row" data-gallery-row>
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/thesis-1.jpg" data-thumb="images/thesis-1.jpg" data-title="mcuYOLO result 1" data-caption="Example output from thesis experiments.">
+                  <div class="gallery-thumb-image"><img src="images/thesis-1.jpg" alt="Thesis output image 1" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Result image 1</strong>
+                    <span>Example successful inference / detection output</span><br>
+                  </div>
+                </button>
+              
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/thesis-2.png" data-thumb="images/thesis-2.png" data-title="mcuYOLO result 2" data-caption="Example output from missing detections.">
+                  <div class="gallery-thumb-image"><img src="images/thesis-2.png" alt="Thesis output image 2" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Result image 2</strong>
+                    <span>Example non-successful inference / detection output</span><br>
+                  </div>
+                </button>
+              
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/thesis-3.png" data-thumb="images/thesis-3.png" data-title="mcuYOLO result 3" data-caption="Example output from thesis experiments.">
+                  <div class="gallery-thumb-image"><img src="images/thesis-3.png" alt="Thesis output image 3" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Result image 3</strong>
+                    <span>Example non-successful inference / detection output</span><br>
+                  </div>
+                </button>
+
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/thesis-4.png" data-thumb="images/thesis-4.png" data-title="mcuYOLO result 4" data-caption="Example output from thesis experiments.">
+                  <div class="gallery-thumb-image"><img src="images/thesis-4.png" alt="Thesis output image 4" loading="lazy"></div>
+                  <div class="gallery-thumb-body">
+                    <strong>Auto Anchor Selecion</strong>
+                    <span>Grozi Dataset Object W-H Graph for Auto Anchors</span><br>
+                  </div>
+                </button>
+              </div>
             </div>
           </article>
 
