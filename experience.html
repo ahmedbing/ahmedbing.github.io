@@ -582,7 +582,7 @@
           <article class="role-card">
             <div class="role-top">
               <div>
-                <div class="role-title">Senior Software Engineer / Tech Lead</div>
+                <div class="role-title">Senior Software Engineer / Feature Owner </div>
                 <div class="role-company">ASML · Topic Embedded Systems</div>
               </div>
               <div class="role-date">Sep 2024 – Present · Eindhoven, Netherlands</div>
@@ -605,20 +605,20 @@
                 <div class="role-title">MSc Thesis Research · Ultra-Low-Power Embedded Object Detection</div>
                 <div class="role-company">Academic Research · Marmara University</div>
               </div>
-              <div class="role-date">2024 – 2025 · Istanbul / Amsterdam</div>
+              <div class="role-date">2023 – 2025 · Istanbul / Amsterdam</div>
             </div>
           
             <ul class="role-points">
               <li>Designed and evaluated an ultra-compact object detection pipeline intended to fit under 1 MB for ultra-low-power MCUs such as STM32H, STM32F, STM32L and Arduino Portenta-class devices.</li>
               <li>Targeted low-cost battery-powered supermarket shelf monitoring/SKU systems that wake periodically, capture an image, and detect shelf products with minimal memory and compute budget.</li>
-              <li>Worked on SKU110K and Migros-style retail object datasets with large category diversity, where traditional shelf-specific computer vision approaches were not sufficient for scalable deployment.</li>
-              <li>Explored and implemented multiple model and training improvements for custom Object Detection Model development inspired by MCUNet, MobileNet's and YOLO-v3 to V11 approaches, including model quantizations, knowladge dissilation, loss-function improvements, augmentation ideas, and lightweight deployment-oriented design decisions.</li>
+              <li>Worked on SKU110K, Grozi 120-3.2k and Migros-style retail object datasets with large category diversity, where traditional shelf-specific computer vision approaches were not sufficient for scalable deployment.</li>
+              <li>Explored and implemented multiple model and training improvements for custom Object Detection Model development inspired by MCUNet, MobileNet's and YOLO-v3 to V11 approaches, including model quantizations, knowledge distillation, loss-function improvements, augmentation ideas, and lightweight deployment-oriented design decisions.</li>
               <li>Researched and benchmarked all state-of-the-art MCU targeted detection models and frameworks such as Edge Impulse, STM32-AI-Zoo, MIT Tiny Engine, NXP eIQ.</li>
-              <li>Despite strong technical progress, the thesis was not completed because the desired accuracy target was not achievable within the hardware and memory limits of the intended ultra-low-power deployment scenario.</li>
+              <li>The research concluded after showing that the target accuracy was not achievable within the intended ultra-low-power memory and compute limits.</li>
             </ul>
           
             <p class="tools">
-              <strong>Tools:</strong> Python, PyTorch, TensorFlow Lite / TensorFlow Lite Micro, OpenCV, STM32-AI, SKU110K, Grozi, YOLO-v3 to V11, MobileNets
+              <strong>Tools:</strong> C, C++, Python, PyTorch, TensorFlow Lite, TensorFlow Lite Micro, OpenCV, STM32-AI, SKU110K, Grozi, YOLO-v3 to V11, MobileNets
             </p>
           
             <div class="gallery-wrap" data-gallery-group="thesis">
@@ -658,7 +658,7 @@
                 <button class="gallery-thumb" type="button" data-gallery-item data-full="images/thesis-4.png" data-thumb="images/thesis-4.png" data-title="mcuYOLO result 4" data-caption="Example output from thesis experiments.">
                   <div class="gallery-thumb-image"><img src="images/thesis-4.png" alt="Thesis output image 4" loading="lazy"></div>
                   <div class="gallery-thumb-body">
-                    <strong>Auto Anchor Selecion</strong>
+                    <strong>Auto Anchor Selection</strong>
                     <span>Grozi Dataset Object W-H Graph for Auto Anchors</span><br>
                   </div>
                 </button>
@@ -676,11 +676,11 @@
             </div>
             <ul class="role-points">
               <li>Developed real-time driver monitoring and pupil tracking systems for automotive 3D AR HUD applications.</li>
-              <li>Implemented and deployed optimized neural network inference pipelines on Qualcomm Snapdragon, NXP, Blaize and Nvidia Xavier platforms.</li>
-              <li>Built a full ML pipeline covering dataset generation, training, evaluation, optimization and embedded deployment.</li>
+              <li>Implemented and deployed optimized neural network inference pipelines on several devices such as Qualcomm Snapdragons, NXP, Blaize and Nvidia Xavier platforms.</li>
+              <li>Built end-to-end ML workflows to develop object detection models covering dataset generation, training, evaluation, optimization and embedded deployment.</li>
               <li>Integrated neural network models into production automotive systems under strict latency and performance constraints.</li>
             </ul>
-            <p class="tools"><strong>Tools:</strong> C++, Python, TensorFlow, PyTorch, TensorRT, OpenCV, OpenVX, OpenGL, SNPE, QNN, Hexagon DSP, Git, Jira, Yocto Linux</p>
+            <p class="tools"><strong>Tools:</strong> C++, Python, TensorFlow, PyTorch, TensorRT, OpenCV, OpenVINO, OpenVX, OpenGL, SNPE, QNN, Hexagon DSP, Git, Jira, Yocto Linux</p>
             <div class="gallery-wrap" data-gallery-group="cyvision">
               <div class="gallery-head">
                 <h4>Media</h4>
@@ -770,14 +770,17 @@
           <article class="role-card">
             <div class="role-top">
               <div>
-                <div class="role-title">Embedded &amp; Computer Vision Engineer</div>
+                <div class="role-title">Embedded Software &amp; Computer Vision Engineer</div>
                 <div class="role-company">Makhina Robotics</div>
               </div>
               <div class="role-date">Dec 2019 – Feb 2022 · Istanbul, Turkey</div>
             </div>
             <ul class="role-points">
-              <li>Led embedded software development for an Autonomous Mobile Robot using STM32-based hardware.</li>
-              <li>Worked on sensors, motor drivers, communication buses and control algorithms.</li>
+              <li>Led end-to-end embedded software development for an in-house STM32-based control board used in warehouse AGV / Autonomous Mobile Robot applications.</li>
+              <li>Contributed to prototype bring-up and production-ready board revisions, working closely with hardware development across board validation, peripheral integration and system-level testing.</li>
+              <li>Developed embedded drivers and low-level firmware for sensors, motor drivers, communication buses, power-control units and real-time control algorithms.</li>
+              <li>Implemented board-level diagnostics, debugging support and hardware/software validation workflows to improve reliability during robot integration and field testing.</li>
+              <li>Supported embedded device development topics including MCU configuration, communication interfaces, actuator control, power sequencing, firmware debugging and production readiness.</li>
               <li>Handled QR detection/scanning tasks and researched multi-object tracking in unknown environments.</li>
             </ul>
             <p class="tools"><strong>Tools:</strong> Python, C, C++, MATLAB, STM32, OpenCV, TensorRT, Jira, Zoho, Git</p>
@@ -871,11 +874,11 @@
                 </button>
 
 
-                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-6.jpg" data-thumb="images/makhina-6.jpg" data-title="Makhina image 6" data-caption="Another supporting image for this role.">
-                  <div class="gallery-thumb-image"><img src="images/makhina-6.jpg" alt="Makhina image 6" loading="lazy"></div>
+                <button class="gallery-thumb" type="button" data-gallery-item data-full="images/makhina-6.png" data-thumb="images/makhina-6.png" data-title="Feature Matching" data-caption="World from the eyes of Robee">
+                  <div class="gallery-thumb-image"><img src="images/makhina-6.png" alt="Makhina image 6" loading="lazy"></div>
                   <div class="gallery-thumb-body">
-                    <strong>Makhina image 6</strong>
-                    <span>Other cool images from warehouse on their way.</span><br>
+                    <strong>Computer Vision Research</strong>
+                    <span>Consecutive frames captured and feature matching represented</span><br>
                   </div>
                 </button>
               </div>
@@ -960,9 +963,9 @@
               <div class="role-date">Jul 2017 – Sep 2017, then Dec 2017 – May 2018 · Salzgitter, Germany - Istanbul, Turkey</div>
             </div>
             <ul class="role-points">
-              <li>Worked on Battery Management System software, battery balancing and communication protocols over CAN Bus and MOD Bus.</li>
+              <li>Worked on Battery Management System software, battery balancing and communication protocols over CAN Bus and ModBus.</li>
               <li>Contributed to a drowsiness-alert system based on driver facial expressions.</li>
-              <li>Internship work included AtMega-based battery charger device programming with screen, buzzer and potentiometer support.</li>
+              <li>Internship work included ATmega-based battery charger device programming with screen, buzzer and potentiometer support.</li>
             </ul>
             <p class="tools"><strong>Tools:</strong> C, Python, MATLAB, OpenCV, Assembly, Atmel</p>
             <div class="gallery-wrap" data-gallery-group="bozankaya">
@@ -990,7 +993,7 @@
                     <span class="media-badge">Video</span>
                   </div>
                   <div class="gallery-thumb-body">
-                    <strong>AtMega-based Battery Charger</strong>
+                    <strong>ATmega-based Battery Charger</strong>
                     <span>Internship project demonstration</span><br>
                   </div>
                 </button>
